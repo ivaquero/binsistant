@@ -1,4 +1,4 @@
-# Binsistant
+# Binsistant (🚧 WIP 🚧)
 
 [![license](https://img.shields.io/github/license/ivaquero/binsistant)](https://github.com/ivaquero/binsistant/blob/master/LICENSE)
 ![code size](https://img.shields.io/github/languages/code-size/ivaquero/binsistant.svg)
