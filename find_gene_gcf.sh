@@ -1,3 +1,4 @@
+#!/bin/bash /bin/zsh
 declare -a gcf_files
 declare -a gene_objects
 
@@ -12,8 +13,8 @@ if [[ ! -d $output ]]; then
     mkdir -p $output
 fi
 
-for gcf_file in ${gcf_files[@]}; do
-    for gene_object in ${gene_objects[@]}; do
-        cat data/GCF_${gcf_file}_from_genomic.fna | rg -U ">lcl.+gene=${gene_objects}.+[\w\n]+" >${output}/${gene_object}.txt
+for gcf_file in "${gcf_files[@]}"; do
+    for gene_object in "${gene_objects[@]}"; do
+        rg -U ">lcl.+gene=${gene_object}.+[\w\n]+" <data/GCF_"${gcf_file}"_from_genomic.fna >${output}/"${gene_object}".txt
     done
 done
